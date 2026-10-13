@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AUREA — Restaurante de autor</title>
+  <meta name="description" content="AUREA, restaurante de autor. Proyecto conceptual de diseño web de WebsoriaStudio: el restaurante, sus datos y sus precios son demostrativos.">
+  <meta name="theme-color" content="#11110F">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Activa los estados iniciales de animación solo si el visitante acepta movimiento. -->
+  <script>
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.css" integrity="sha384-gNKFsxEO/HxWOwNuzDJ+LC49+5LQTHKAZjdsSKgbraM36zXn2VDakftLnW9c7W3t" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="curtain" aria-hidden="true">
+    <p class="curtain__word"><span>A</span><span>U</span><span>R</span><span>E</span><span>A</span></p>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="AUREA, ir al inicio">AUREA</a>
+    <nav class="site-nav" aria-label="Principal">
+      <a class="link" href="#filosofia">Filosofía</a>
+      <a class="link" href="#experiencia">Experiencia</a>
+      <a class="link" href="#carta">Carta</a>
+      <a class="link" href="#galeria">Galería</a>
+    </nav>
+    <a class="header-cta" href="#reservas" data-magnetic><span>Reservar</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="burger__label">Menú</span>
+      <span class="burger__icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav class="menu__nav" aria-label="Menú móvil">
+      <a href="#filosofia"><span>Filosofía</span></a>
+      <a href="#experiencia"><span>Experiencia</span></a>
+      <a href="#carta"><span>Carta</span></a>
+      <a href="#galeria"><span>Galería</span></a>
+      <a href="#reservas"><span>Reservas</span></a>
+    </nav>
+    <p class="menu__note">Proyecto conceptual de WebsoriaStudio</p>
+  </div>
+
+  <main id="contenido">
+
+    <!-- 1 · Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__media">
+        <img
+          src="https://images.unsplash.com/photo-1663530761401-15eefb544889?auto=format&fit=crop&q=72&w=1600"
+          srcset="https://images.unsplash.com/photo-1663530761401-15eefb544889?auto=format&fit=crop&q=70&w=900 900w,
+                  https://images.unsplash.com/photo-1663530761401-15eefb544889?auto=format&fit=crop&q=72&w=1600 1600w,
+                  https://images.unsplash.com/photo-1663530761401-15eefb544889?auto=format&fit=crop&q=72&w=2400 2400w"
+          sizes="100vw" alt="Un cocinero termina un plato con una cucharada de salsa, bajo una luz tenue"
+          fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">El arte de saborear el momento</h1>
+        <div class="hero__foot">
+          <p class="hero__sub">Cocina de autor contemporánea. Un menú que cambia con la estación y una sala pensada para cenar sin prisa.</p>
+          <div class="hero__cta">
+            <a class="btn btn--light" href="#filosofia" data-magnetic><span>Explorar la experiencia</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Desliza</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- 2 · Filosofía -->
+    <section class="filosofia" id="filosofia">
+      <div class="filosofia__grid">
+        <p class="tag"><em>01</em><i></i>Nuestra filosofía</p>
+
+        <p class="filosofia__statement" data-scrubtext>
+          Cocinamos lo que la estación ofrece y nada más. Pocos ingredientes, fuego lento y el tiempo necesario para que cada cosa sepa a lo que es.
+        </p>
+
+        <div class="filosofia__aside">
+          <figure class="frame filosofia__photo" data-reveal data-speed="50">
+            <div class="par" data-parallax="8">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1775498017681-b95215dd704f?auto=format&fit=crop&q=70&w=900"
+                srcset="https://images.unsplash.com/photo-1775498017681-b95215dd704f?auto=format&fit=crop&q=70&w=600 600w,
+                        https://images.unsplash.com/photo-1775498017681-b95215dd704f?auto=format&fit=crop&q=70&w=1100 1100w"
+                sizes="(min-width: 900px) 26vw, 60vw" alt="Un bocado servido sobre una concha, en la barra de la cocina">
+            </div>
+          </figure>
+          <div class="filosofia__text">
+            <p data-fade>La carta es corta a propósito. Cada plato nace de un producto concreto y se retira cuando ese producto deja de estar en su mejor momento.</p>
+            <p data-fade>En la sala ocurre lo mismo: pocas mesas, luz baja y un servicio que acompaña sin interrumpir.</p>
+          </div>
+        </div>
+        <span class="filosofia__rule" aria-hidden="true" data-speed="-70"></span>
+      </div>
+
+      <div class="expand" data-expand="center">
+        <div class="expand__pin">
+          <div class="expand__frame">
+            <div class="expand__media">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1774509625509-8c452b51649e?auto=format&fit=crop&q=72&w=1600"
+                srcset="https://images.unsplash.com/photo-1774509625509-8c452b51649e?auto=format&fit=crop&q=70&w=900 900w,
+                        https://images.unsplash.com/photo-1774509625509-8c452b51649e?auto=format&fit=crop&q=72&w=1600 1600w,
+                        https://images.unsplash.com/photo-1774509625509-8c452b51649e?auto=format&fit=crop&q=72&w=2400 2400w"
+                sizes="100vw" alt="Una mesa larga con copas y velas encendidas, en una sala en penumbra">
+            </div>
+            <div class="expand__shade" aria-hidden="true"></div>
+            <h2 class="expand__title">
+              <span class="mask"><span>La mesa es</span></span>
+              <span class="mask"><span>el último ingrediente</span></span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Experiencia gastronómica -->
+    <section class="acts" id="experiencia">
+      <header class="acts__intro">
+        <p class="tag tag--dark"><em>02</em><i></i>Experiencia gastronómica</p>
+        <h2 class="h2" data-split>Un plato, cuatro actos</h2>
+        <p class="acts__lead" data-fade>Antes de llegar a la mesa, cada plato recorre el mismo camino. Desliza para seguirlo de principio a fin.</p>
+      </header>
+
+      <div class="acts__track" data-acts>
+        <div class="acts__pin">
+          <div class="acts__stage">
+            <figure class="act">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1790293840932-a568128dbb1f?auto=format&fit=crop&q=72&w=1600"
+                srcset="https://images.unsplash.com/photo-1790293840932-a568128dbb1f?auto=format&fit=crop&q=70&w=900 900w,
+                        https://images.unsplash.com/photo-1790293840932-a568128dbb1f?auto=format&fit=crop&q=72&w=1600 1600w,
+                        https://images.unsplash.com/photo-1790293840932-a568128dbb1f?auto=format&fit=crop&q=72&w=2400 2400w"
+                sizes="100vw" alt="Higos enteros y partidos sobre un paño de lino">
+            </figure>
+            <figure class="act">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1717321302149-3c6c9c76de67?auto=format&fit=crop&q=72&w=1600"
+                srcset="https://images.unsplash.com/photo-1717321302149-3c6c9c76de67?auto=format&fit=crop&q=70&w=900 900w,
+                        https://images.unsplash.com/photo-1717321302149-3c6c9c76de67?auto=format&fit=crop&q=72&w=1600 1600w,
+                        https://images.unsplash.com/photo-1717321302149-3c6c9c76de67?auto=format&fit=crop&q=72&w=2400 2400w"
+                sizes="100vw" alt="Una sartén envuelta en llamas sobre el fuego de la cocina">
+            </figure>
+            <figure class="act">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&q=72&w=1600"
+                srcset="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&q=70&w=900 900w,
+                        https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&q=72&w=1600 1600w,
+                        https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&q=72&w=2400 2400w"
+                sizes="100vw" alt="Las manos de un cocinero colocan hierbas en el plato con unas pinzas">
+            </figure>
+            <figure class="act">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1499715217757-2aa48ed7e593?auto=format&fit=crop&q=72&w=1600"
+                srcset="https://images.unsplash.com/photo-1499715217757-2aa48ed7e593?auto=format&fit=crop&q=70&w=900 900w,
+                        https://images.unsplash.com/photo-1499715217757-2aa48ed7e593?auto=format&fit=crop&q=72&w=1600 1600w,
+                        https://images.unsplash.com/photo-1499715217757-2aa48ed7e593?auto=format&fit=crop&q=72&w=2400 2400w"
+                sizes="100vw" alt="El plato terminado, servido sobre cerámica oscura">
+            </figure>
+          </div>
+
+          <div class="acts__shade" aria-hidden="true"></div>
+          <span class="acts__bar acts__bar--top" aria-hidden="true"></span>
+          <span class="acts__bar acts__bar--bottom" aria-hidden="true"></span>
+
+          <div class="acts__texts">
+            <article class="act-text">
+              <p class="act-text__n">Acto I</p>
+              <h3><span class="mask"><span>Ingredientes</span></span></h3>
+              <p class="act-text__p">Todo empieza en el mercado. Elegimos poco y lo elegimos maduro: lo que hoy está en su punto decide el menú de esta noche.</p>
+            </article>
+            <article class="act-text">
+              <p class="act-text__n">Acto II</p>
+              <h3><span class="mask"><span>Preparación</span></span></h3>
+              <p class="act-text__p">Brasa, llama y reposo. El fuego hace su parte y la paciencia hace el resto; ningún paso se acorta para llegar antes.</p>
+            </article>
+            <article class="act-text">
+              <p class="act-text__n">Acto III</p>
+              <h3><span class="mask"><span>Presentación</span></span></h3>
+              <p class="act-text__p">El emplatado se hace a mano, pieza a pieza. Buscamos que el plato se entienda con solo mirarlo.</p>
+            </article>
+            <article class="act-text">
+              <p class="act-text__n">Acto IV</p>
+              <h3><span class="mask"><span>La mesa</span></span></h3>
+              <p class="act-text__p">Lo que llega a la mesa es la suma de todo lo anterior. A partir de aquí, el plato es tuyo.</p>
+            </article>
+          </div>
+
+          <div class="acts__progress" aria-hidden="true">
+            <span class="acts__fill"></span>
+            <ol>
+              <li>Ingredientes</li>
+              <li>Preparación</li>
+              <li>Presentación</li>
+              <li>La mesa</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · Carta -->
+    <section class="carta" id="carta">
+      <header class="carta__head">
+        <p class="tag"><em>03</em><i></i>Carta de autor</p>
+        <h2 class="h2" data-split>Doce platos, una estación</h2>
+        <div class="tabs" role="tablist" aria-label="Categorías de la carta">
+          <button class="tab" role="tab" id="tab-entrantes" aria-controls="panel-entrantes" aria-selected="true">Entrantes</button>
+          <button class="tab" role="tab" id="tab-principales" aria-controls="panel-principales" aria-selected="false" tabindex="-1">Platos principales</button>
+          <button class="tab" role="tab" id="tab-postres" aria-controls="panel-postres" aria-selected="false" tabindex="-1">Postres</button>
+          <button class="tab" role="tab" id="tab-bebidas" aria-controls="panel-bebidas" aria-selected="false" tabindex="-1">Bebidas</button>
+          <span class="tabs__line" aria-hidden="true"></span>
+        </div>
+      </header>
+
+      <div class="carta__panels">
+        <div class="panel" role="tabpanel" id="panel-entrantes" aria-labelledby="tab-entrantes" tabindex="0">
+          <ul class="dishes">
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1577906096429-f73c2c312435?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1577906096429-f73c2c312435?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1577906096429-f73c2c312435?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 36vw, 90vw" alt="Pequeños bocados alineados sobre una bandeja de piedra"></figure>
+              <div class="dish__head"><h3 class="dish__name">Bocados de bienvenida</h3><i></i><p class="dish__price">18&nbsp;€</p></div>
+              <p class="dish__desc">Cuatro piezas de un solo bocado, con crema fresca, encurtidos y flores de temporada.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1623073284788-0d846f75e329?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1623073284788-0d846f75e329?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1623073284788-0d846f75e329?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 28vw, 90vw" alt="Crema verde servida en un cuenco oscuro con una guarnición en el centro"></figure>
+              <div class="dish__head"><h3 class="dish__name">Crema de guisante y menta</h3><i></i><p class="dish__price">16&nbsp;€</p></div>
+              <p class="dish__desc">Guisante lágrima, aceite de hierbas y un toque ahumado.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1761095596757-db038313df59?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1761095596757-db038313df59?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1761095596757-db038313df59?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 22vw, 90vw" alt="Gambas servidas en un cuenco azul sobre una mesa de madera"></figure>
+              <div class="dish__head"><h3 class="dish__name">Gamba roja</h3><i></i><p class="dish__price">24&nbsp;€</p></div>
+              <p class="dish__desc">Apenas marcada, con su jugo y pan tostado.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-principales" aria-labelledby="tab-principales" tabindex="0" hidden>
+          <ul class="dishes">
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1700481935677-26f2336f6f36?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1700481935677-26f2336f6f36?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1700481935677-26f2336f6f36?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 36vw, 90vw" alt="Lomo de pescado con la piel dorada sobre una salsa verde"></figure>
+              <div class="dish__head"><h3 class="dish__name">Lubina en salsa verde</h3><i></i><p class="dish__price">34&nbsp;€</p></div>
+              <p class="dish__desc">Piel crujiente, pepino y una salsa ligera de hierbas frescas.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1728034782567-ca8da7f2d507?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1728034782567-ca8da7f2d507?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1728034782567-ca8da7f2d507?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 28vw, 90vw" alt="Carne en su punto, cortada en lonchas, con espárragos"></figure>
+              <div class="dish__head"><h3 class="dish__name">Lomo madurado</h3><i></i><p class="dish__price">42&nbsp;€</p></div>
+              <p class="dish__desc">A la brasa, con espárragos verdes y jugo de frutos rojos.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1764397514739-57a0ac81330d?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1764397514739-57a0ac81330d?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1764397514739-57a0ac81330d?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 22vw, 90vw" alt="Un cocinero con guantes termina un plato de pulpo con brotes verdes"></figure>
+              <div class="dish__head"><h3 class="dish__name">Pulpo a la llama</h3><i></i><p class="dish__price">36&nbsp;€</p></div>
+              <p class="dish__desc">Con verduras asadas y brotes tiernos.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-postres" aria-labelledby="tab-postres" tabindex="0" hidden>
+          <ul class="dishes">
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1780181612148-20a394ff0dff?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1780181612148-20a394ff0dff?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1780181612148-20a394ff0dff?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 36vw, 90vw" alt="Postre de fruta roja y helado sobre un plato de cerámica gris"></figure>
+              <div class="dish__head"><h3 class="dish__name">Fresa, nata y helado</h3><i></i><p class="dish__price">14&nbsp;€</p></div>
+              <p class="dish__desc">Fruta macerada, nata montada a mano y helado de la casa.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1768326119181-5f3cfe0adb4c?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1768326119181-5f3cfe0adb4c?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1768326119181-5f3cfe0adb4c?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 28vw, 90vw" alt="Postre de chocolate negro sobre un plato blanco"></figure>
+              <div class="dish__head"><h3 class="dish__name">Chocolate negro</h3><i></i><p class="dish__price">15&nbsp;€</p></div>
+              <p class="dish__desc">Cacao intenso, sal y un hilo de caramelo.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1759277513461-41fde7d24083?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1759277513461-41fde7d24083?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1759277513461-41fde7d24083?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 22vw, 90vw" alt="Pastel de cobertura verde coronado con flores"></figure>
+              <div class="dish__head"><h3 class="dish__name">Lionesa de pistacho</h3><i></i><p class="dish__price">13&nbsp;€</p></div>
+              <p class="dish__desc">Crema ligera y flores comestibles.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-bebidas" aria-labelledby="tab-bebidas" tabindex="0" hidden>
+          <ul class="dishes">
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1770164491578-09f08156db2d?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1770164491578-09f08156db2d?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1770164491578-09f08156db2d?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 36vw, 90vw" alt="Un licor ámbar cae sobre un vaso con hielo"></figure>
+              <div class="dish__head"><h3 class="dish__name">Old fashioned de la casa</h3><i></i><p class="dish__price">14&nbsp;€</p></div>
+              <p class="dish__desc">Destilado añejo, azúcar moreno y piel de naranja, servido sobre hielo tallado.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1641759756543-20168fcab299?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1641759756543-20168fcab299?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1641759756543-20168fcab299?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 28vw, 90vw" alt="Vino tinto cayendo en una copa"></figure>
+              <div class="dish__head"><h3 class="dish__name">Tinto por copas</h3><i></i><p class="dish__price">9&nbsp;€</p></div>
+              <p class="dish__desc">Selección semanal del sumiller.</p>
+            </li>
+            <li class="dish">
+              <figure class="frame dish__photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1773188243990-b50e86881bd7?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1773188243990-b50e86881bd7?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1773188243990-b50e86881bd7?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 22vw, 90vw" alt="Un martini con aceitunas sobre una mesa de madera"></figure>
+              <div class="dish__head"><h3 class="dish__name">Martini seco</h3><i></i><p class="dish__price">13&nbsp;€</p></div>
+              <p class="dish__desc">Muy frío, con aceitunas.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Galería -->
+    <section class="galeria" id="galeria">
+      <header class="galeria__head">
+        <p class="tag tag--dark"><em>04</em><i></i>Galería</p>
+        <h2 class="h2" data-split>La cocina, la sala, la mesa</h2>
+      </header>
+
+      <div class="comp comp--a">
+        <figure class="frame comp__tall" data-reveal>
+          <div class="par" data-parallax="8">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1777897352830-3355142a33d2?auto=format&fit=crop&q=70&w=1100" srcset="https://images.unsplash.com/photo-1777897352830-3355142a33d2?auto=format&fit=crop&q=70&w=700 700w, https://images.unsplash.com/photo-1777897352830-3355142a33d2?auto=format&fit=crop&q=70&w=1400 1400w" sizes="(min-width: 900px) 44vw, 90vw" alt="Un cocinero presenta un plato de atún crudo iluminado por un haz de luz">
+          </div>
+          <figcaption>El pase</figcaption>
+        </figure>
+        <div class="comp__side" data-speed="-60">
+          <figure class="frame comp__small" data-reveal>
+            <div class="par" data-parallax="6">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1761330439211-1f94741e8c4d?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1761330439211-1f94741e8c4d?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1761330439211-1f94741e8c4d?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 30vw, 70vw" alt="Nueces en un cuenco y esparcidas sobre una superficie oscura">
+            </div>
+            <figcaption>La despensa</figcaption>
+          </figure>
+          <p class="comp__note" data-fade>Trabajamos con lo que cabe en una despensa pequeña. Lo que no se usa hoy, no se compra.</p>
+        </div>
+      </div>
+
+      <div class="expand expand--side" data-expand="right">
+        <div class="expand__pin">
+          <div class="expand__aside">
+            <p class="expand__aside-n">Después de la cena</p>
+            <p class="expand__aside-t">La barra sigue abierta cuando la cocina se apaga.</p>
+          </div>
+          <div class="expand__frame">
+            <div class="expand__media">
+              <img loading="lazy" decoding="async"
+                src="https://images.unsplash.com/photo-1778104959337-5260c89e2293?auto=format&fit=crop&q=72&w=1600"
+                srcset="https://images.unsplash.com/photo-1778104959337-5260c89e2293?auto=format&fit=crop&q=70&w=900 900w,
+                        https://images.unsplash.com/photo-1778104959337-5260c89e2293?auto=format&fit=crop&q=72&w=1600 1600w,
+                        https://images.unsplash.com/photo-1778104959337-5260c89e2293?auto=format&fit=crop&q=72&w=2400 2400w"
+                sizes="100vw" alt="Dos cócteles sobre la barra, con el barman al fondo">
+            </div>
+            <div class="expand__shade" aria-hidden="true"></div>
+            <h3 class="expand__title">
+              <span class="mask"><span>La última copa</span></span>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp comp--c">
+        <figure class="frame comp__wide" data-reveal>
+          <div class="par" data-parallax="7">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1770736929333-4fb8cd5a1657?auto=format&fit=crop&q=70&w=1400" srcset="https://images.unsplash.com/photo-1770736929333-4fb8cd5a1657?auto=format&fit=crop&q=70&w=800 800w, https://images.unsplash.com/photo-1770736929333-4fb8cd5a1657?auto=format&fit=crop&q=70&w=1800 1800w" sizes="(min-width: 900px) 56vw, 90vw" alt="Sala en penumbra con mesas preparadas bajo lámparas colgantes">
+          </div>
+          <figcaption>La sala</figcaption>
+        </figure>
+        <figure class="frame comp__lamp" data-reveal data-speed="70">
+          <div class="par" data-parallax="8">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1779745227145-67d965135660?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1779745227145-67d965135660?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1779745227145-67d965135660?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 26vw, 60vw" alt="Una mesa en penumbra iluminada por una pequeña lámpara">
+          </div>
+          <figcaption>Mesa para dos</figcaption>
+        </figure>
+      </div>
+
+      <div class="comp comp--d">
+        <p class="comp__quote" data-split>Nada sale de la cocina sin haberse probado dos veces.</p>
+        <figure class="frame comp__portrait" data-reveal data-speed="-40">
+          <div class="par" data-parallax="8">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1759741558258-f24a3e847968?auto=format&fit=crop&q=70&w=900" srcset="https://images.unsplash.com/photo-1759741558258-f24a3e847968?auto=format&fit=crop&q=70&w=600 600w, https://images.unsplash.com/photo-1759741558258-f24a3e847968?auto=format&fit=crop&q=70&w=1100 1100w" sizes="(min-width: 900px) 30vw, 80vw" alt="Una mano espolvorea especias doradas sobre un plato terminado">
+          </div>
+          <figcaption>El último gesto</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 6 · Reservas -->
+    <section class="reservas" id="reservas">
+      <span class="reservas__ring" aria-hidden="true" data-speed="90"></span>
+      <p class="tag"><em>05</em><i></i>Reservas</p>
+      <h2 class="reservas__title" data-split>Una experiencia para recordar</h2>
+      <div class="reservas__foot">
+        <p data-fade>Elige fecha, hora y número de comensales. AUREA es un proyecto conceptual: el formulario muestra cómo funcionaría la reserva, pero no envía ni guarda ninguna.</p>
+        <button class="btn btn--dark" type="button" data-open-reserva data-magnetic><span>Reservar una mesa</span></button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7 · Footer -->
+  <footer class="footer">
+    <p class="footer__word" aria-label="AUREA"><span aria-hidden="true">A</span><span aria-hidden="true">U</span><span aria-hidden="true">R</span><span aria-hidden="true">E</span><span aria-hidden="true">A</span></p>
+    <div class="footer__row">
+      <nav class="footer__nav" aria-label="Secciones">
+        <a class="link" href="#filosofia">Filosofía</a>
+        <a class="link" href="#experiencia">Experiencia</a>
+        <a class="link" href="#carta">Carta</a>
+        <a class="link" href="#galeria">Galería</a>
+        <a class="link" href="#reservas">Reservas</a>
+      </nav>
+      <a class="to-top" href="#inicio" data-magnetic>
+        <span>Volver arriba</span>
+        <i aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 14V2M3 7l5-5 5 5"/></svg></i>
+      </a>
+    </div>
+    <div class="footer__base">
+      <p>Concept &amp; Web Design — WebsoriaStudio</p>
+      <p>AUREA es un restaurante ficticio. Sus datos, platos y precios son demostrativos.</p>
+    </div>
+  </footer>
+
+  <dialog class="reserva" id="reserva" aria-labelledby="reserva-titulo" data-lenis-prevent>
+    <button class="reserva__close" type="button" data-close-reserva aria-label="Cerrar">Cerrar</button>
+    <p class="reserva__flag">Interfaz demostrativa</p>
+    <h2 class="reserva__title" id="reserva-titulo">Reservar una mesa</h2>
+
+    <!--
+      Para conectar el formulario a un servicio de envío, escribe su URL en
+      data-endpoint (por ejemplo, un endpoint de Formspree o uno propio).
+      Recibirá un POST con JSON: nombre, email, fecha, hora, comensales, notas.
+      Con data-endpoint vacío el formulario solo muestra una vista previa.
+    -->
+    <form class="reserva__form" id="reserva-form" data-endpoint="" novalidate>
+      <div class="field field--half">
+        <label for="r-nombre">Nombre</label>
+        <input id="r-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="r-nombre-error">
+        <span class="field__line" aria-hidden="true"></span>
+        <p class="field__error" id="r-nombre-error" hidden></p>
+      </div>
+      <div class="field field--half">
+        <label for="r-email">Correo electrónico</label>
+        <input id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="r-email-error">
+        <span class="field__line" aria-hidden="true"></span>
+        <p class="field__error" id="r-email-error" hidden></p>
+      </div>
+      <div class="field field--third">
+        <label for="r-fecha">Fecha</label>
+        <input id="r-fecha" name="fecha" type="date" required aria-describedby="r-fecha-error">
+        <span class="field__line" aria-hidden="true"></span>
+        <p class="field__error" id="r-fecha-error" hidden></p>
+      </div>
+      <div class="field field--third">
+        <label for="r-hora">Hora</label>
+        <select id="r-hora" name="hora">
+          <option>20:00</option><option>20:30</option><option selected>21:00</option><option>21:30</option><option>22:00</option>
+        </select>
+        <span class="field__line" aria-hidden="true"></span>
+      </div>
+      <div class="field field--third">
+        <label for="r-comensales">Comensales</label>
+        <select id="r-comensales" name="comensales">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+        </select>
+        <span class="field__line" aria-hidden="true"></span>
+      </div>
+      <div class="field">
+        <label for="r-notas">Alergias o peticiones <em>(opcional)</em></label>
+        <textarea id="r-notas" name="notas" rows="2" maxlength="400" aria-describedby="r-notas-count"></textarea>
+        <span class="field__line" aria-hidden="true"></span>
+        <p class="field__hint" id="r-notas-count"></p>
+      </div>
+      <!-- Trampa para bots: las personas no ven ni rellenan este campo. -->
+      <div class="field--trap" aria-hidden="true">
+        <label for="r-web">No rellenes este campo</label>
+        <input id="r-web" name="web" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="reserva__status" id="reserva-status" role="alert" hidden></p>
+      <button class="btn btn--light reserva__submit" type="submit"><span>Ver cómo quedaría</span></button>
+    </form>
+
+    <div class="reserva__result" id="reserva-result" hidden tabindex="-1">
+      <p class="reserva__summary" id="reserva-summary"></p>
+      <p class="reserva__warn" id="reserva-warn"></p>
+      <button class="link reserva__again" type="button" id="reserva-again">Cambiar los datos</button>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" integrity="sha384-P8VzCVnT9NBUkMrpcIZrJbA7EBjJvh/fJS6PmP+4nLIM284DtsImIv8D0fFjIkeh" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" integrity="sha384-xb96EMJeax+NLXMC88ZBa1xAeAW+kn+horHh/zFlbMLG2UPWhMJJSlv7fi57hS+Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js" integrity="sha384-FKTX0CNJ8ngN1oGMBReVu7mvjTJyjFiD5etb1NKnYxc+8eFI2O0KWnksTN+oTFcu" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
